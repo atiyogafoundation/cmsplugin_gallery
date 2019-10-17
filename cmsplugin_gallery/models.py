@@ -94,7 +94,10 @@ class Image(Orderable):
             return os.path.join(get_cms_setting('PAGE_MEDIA_PATH'),
                 str(today.year), str(today.month), str(today.day), filename)
 
-    gallery = models.ForeignKey(GalleryPlugin, verbose_name=_("Gallery"))
+    gallery = models.ForeignKey(
+            GalleryPlugin,
+            verbose_name=_("Gallery"),
+            on_delete=models.SET_NULL)
     image_src = FilerImageField(
             verbose_name=_(u'Image File'),
             blank=True,
