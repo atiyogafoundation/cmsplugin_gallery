@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('src_width', models.PositiveSmallIntegerField(verbose_name='Image height', null=True, editable=False)),
                 ('title', models.CharField(max_length=255, verbose_name='Title', blank=True)),
                 ('alt', models.TextField(verbose_name='Alt text', blank=True)),
-                ('gallery', models.ForeignKey(verbose_name='Gallery', to='cmsplugin_gallery.GalleryPlugin', on_delete=django.db.models.deletion.DO_NOTHING)),
+                ('gallery', models.ForeignKey(verbose_name='Gallery', to='cmsplugin_gallery.GalleryPlugin')),
             ],
             options={
                 'ordering': ('inline_ordering_position',),
