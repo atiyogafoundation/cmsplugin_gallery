@@ -97,7 +97,7 @@ class Image(Orderable):
     gallery = models.ForeignKey(
             GalleryPlugin,
             verbose_name=_("Gallery"),
-            on_delete=models.SET_NULL)
+            on_delete=models.DO_NOTHING)
     image_src = FilerImageField(
             verbose_name=_(u'Image File'),
             blank=True,
